@@ -1,0 +1,28 @@
+# Node dependencies
+node_modules/
+npm-debug.log*
+
+# Python virtual environment and caches
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Databases
+*.db
+*.db-journal
+
+# Build outputs
+dist/
+build/
+.tsbuildinfo
+out/
+
+# System and logs
+.DS_Store
+*.log
+.system_generated/
+.idea/
+.vscode/
+.env*.local

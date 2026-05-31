@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-bg-dark: #090d16;
+  --color-bg-surface: #131c2e;
+  --color-bg-card: #1b2640;
+  
+  --color-primary: #8b5cf6;
+  --color-primary-light: #a78bfa;
+  --color-secondary: #06b6d4;
+  --color-accent: #f43f5e;
+  
+  --color-status-success: #10b981;
+  --color-status-warning: #f59e0b;
+  --color-status-danger: #ef4444;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-dark);
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(27, 38, 64, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(27, 38, 64, 0.6);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.15);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Glowing Border Utilities */
+.glow-primary {
+  box-shadow: 0 0 20px -3px rgba(139, 92, 246, 0.4);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 20px -3px rgba(6, 118, 212, 0.4);
+}
+
+.glow-success {
+  box-shadow: 0 0 20px -3px rgba(16, 185, 129, 0.4);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2b395c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e5285;
+}
+
+/* Transition Utilities */
+.transition-all-custom {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
