@@ -1,5 +1,9 @@
 # Adaptive Quest AI – AI-Powered Learning Game Prototype
 
+**Live demo:** https://vamshi1512.github.io/adaptive-quest-ai/
+
+> Note: The GitHub Pages demo runs the frontend build. Backend-powered gameplay/API flows require running the FastAPI backend locally.
+
 Adaptive Quest AI is a complete, portfolio-ready interactive learning game prototype designed for corporate training. It combines narrative-based gameplay (quests) with real-time adaptive difficulty scaling and comprehensive KPI telemetry dashboards. 
 
 This project was built to demonstrate game-based learning theories, AI-assisted workflows, and playtest evaluation pipelines suitable for an **AI Games Internship** application.
